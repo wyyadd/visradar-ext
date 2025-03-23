@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>VISRadar: Auto-scheduler</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mt-3 mb-2">VISRadar: Auto-Scheduler</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="mt-2">
+                <div class="form-check form-switch" style="text-align: left;">
+                    <input class="form-check-input" id="activate" role="switch" type="checkbox">
+                    <label class="form-check-label" for="activate">Activate Auto-Scheduler</label>
+                </div>
+            </div>
+            <div class="my-2">
+                <div class="form-check form-switch" style="text-align: left;">
+                    <input class="form-check-input" id="autobook" role="switch" type="checkbox">
+                    <label class="form-check-label" for="autobook">Enable Autobook</label>
+                </div>
+            </div>
+            <div class="my-2 text-start">
+                <input id="frequency" max="120" min="30" name="frequency" step="10" type="range">
+                <label for="frequency">Frequency of checks (every <span id="checkfrequency">60</span> seconds)</label>
+            </div>
+            <p class="my-2 text-start">You can adjust the start and end dates to limit the AISRadar's search range.</p>
+            <div class="my-2 text-start">
+                <label for="start">Start Date</label>
+                <input id="start" type="date">
+            </div>
+            <div class="my-2 text-start">
+                <label for="end">End Date</label>
+                <input id="end" type="date">
+            </div>
+            <p class="my-2 text-start">Changes are autosaved.</p>
+            <form class="my-2" id="ais_visa_info" name="ais_visa_info">
+                <div class="d-grid">
+                    <button class="btn btn-danger btn-sm" id="reset_info" type="submit">Reset All Data</button>
+                </div>
+            </form>
+            <p class="my-2 text-center">
+                <a class="btn btn-info btn-sm w-100" href="https://www.visradar.com" target="_blank">Tired of scheduling
+                    visa slots? Let us help!</a>
+            </p>
+            <div class="text-center mt-0">
+                <p>Powered by <a href="https://www.visradar.com" target="_blank">VisRadar.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/content.js"></script>
+</body>
+
+</html>

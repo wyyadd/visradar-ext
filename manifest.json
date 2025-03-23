@@ -1,0 +1,48 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 3,
+  "name": "VISRadar: Visa Auto-Scheduler",
+  "version": "1.0.0",
+  "description": "This extension helps you to reschedule US Visa appointment automatically.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "notifications",
+    "declarativeContent"
+  ],
+  "background": {
+    "service_worker": "/js/background.js"
+  },
+  "host_permissions": [
+    "https://ais.usvisa-info.com/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://ais.usvisa-info.com/*"
+    ]
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ais.usvisa-info.com/*"
+      ],
+      "js": [
+        "/js/sweetalert.js",
+        "/js/rescheduler.js"
+      ],
+      "css": [
+        "/css/sweetalert.css"
+      ]
+    }
+  ],
+  "incognito": "spanning"
+}
