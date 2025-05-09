@@ -1,3 +1,4 @@
+# VISRadar: US Visa Auto-Scheduler
 ## Open-Sourced VisRadar Extension for Chrome
 **Tired of scheduling visa slots? Let us help!**  
 See our [**website**](https://www.visradar.com/) for more details
